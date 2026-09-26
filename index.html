@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EasyMux — Android Terminal & Security Toolkit</title>
+<meta name="description" content="EasyMux — a Termux-based Android terminal environment with an EasyMux interface and integrated tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="loader" class="loader">
+  <div class="terminal">
+    <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><b>EASYMUX SYSTEM</b></div>
+    <div class="term-body">
+      <div><span class="p">root@easymux:~$</span> ./start_easymux.sh</div>
+      <div>[INFO] Loading terminal environment...</div>
+      <div>[INFO] EasyMux modules: <span class="ok">READY</span></div>
+      <div>[INFO] Security tools: <span class="ok">READY</span></div>
+      <div>[SUCCESS] Access granted.</div>
+      <div><span class="p">root@easymux:~$</span> <span class="blink">_</span></div>
+    </div>
+    <div class="progress"><i id="progress"></i></div>
+    <small id="pct">0%</small>
+  </div>
+</div>
+
+<canvas id="matrix"></canvas>
+<header id="header">
+  <a class="brand" href="#home"><span class="logo-mark">EM</span><span>EasyMux</span></a>
+  <nav>
+    <a href="#home">Home</a><a href="#features">Features</a><a href="#manual">Manual</a>
+    <a href="#compare">Termux vs EasyMux</a><a href="#download">Download</a>
+  </nav>
+  <button id="menu" aria-label="menu">☰</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">ANDROID • TERMINAL • TOOLS</div>
+      <h1><span>Easy</span>Mux</h1>
+      <p class="lead">A familiar Android terminal environment with an EasyMux interface and a growing collection of practical tools for terminal users, system management and security-focused workflows.</p>
+      <div class="actions"><a class="btn primary" href="#download">DOWNLOAD EASYMUX</a><a class="btn" href="#features">EXPLORE FEATURES</a></div>
+      <div class="stats"><div><b>0.118.0</b><small>PROJECT VERSION</small></div><div><b>API 21+</b><small>MIN SDK</small></div><div><b>36</b><small>COMPILE SDK</small></div></div>
+    </div>
+    <div class="hero-card">
+      <div class="card-top"><span>easymux://home</span><span>● ● ●</span></div>
+      <div class="screen">
+        <div class="ascii">╔══════════════════════╗<br>║      E A S Y M U X   ║<br>╚══════════════════════╝</div>
+        <p><span class="p">$</span> Choose a module</p>
+        <div class="cmds"><span>01 Package Manager</span><span>02 File Manager</span><span>03 Network Tools</span><span>04 Security Tools</span><span>05 Proot Distro</span><span>06 System Info</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="section-head"><span>01 / FEATURES</span><h2>Built around useful tools.</h2><p>The source project contains dedicated EasyMux screens for the following modules.</p></div>
+  <div class="grid">
+    <article><i>⌘</i><h3>Package Manager</h3><p>Manage packages from an EasyMux-oriented interface.</p></article>
+    <article><i>▣</i><h3>File Manager</h3><p>Work with files from the integrated EasyMux UI.</p></article>
+    <article><i>⚙</i><h3>Scripts</h3><p>Access the project's scripts workflow from EasyMux.</p></article>
+    <article><i>◉</i><h3>Process Manager</h3><p>Inspect and work with running processes.</p></article>
+    <article><i>⌁</i><h3>Network Tools</h3><p>Network-focused utilities exposed through a dedicated screen.</p></article>
+    <article><i>◈</i><h3>Security Tools</h3><p>A dedicated area for security-oriented tooling.</p></article>
+    <article><i>▱</i><h3>Proot Distro</h3><p>Access the project's Proot Distro interface.</p></article>
+    <article><i>◫</i><h3>Backup</h3><p>Create compressed backups in Shared Storage / EasyMuxBackups.</p></article>
+    <article><i>⌁</i><h3>Boot Config</h3><p>Configure the project's boot-related settings.</p></article>
+    <article><i>ⓘ</i><h3>System Info</h3><p>View app and system information inside EasyMux.</p></article>
+    <article><i>⚡</i><h3>Termux API</h3><p>EasyMux includes a dedicated Termux API screen.</p></article>
+    <article><i>⌘</i><h3>EasyMux Home</h3><p>A dedicated home screen ties the EasyMux modules together.</p></article>
+  </div>
+</section>
+
+<section id="manual" class="section alt">
+  <div class="section-head"><span>02 / USER MANUAL</span><h2>Start in a few steps.</h2></div>
+  <div class="steps">
+    <div><b>01</b><h3>Install</h3><p>Download the APK from the project's official release location and install it on a compatible Android device.</p></div>
+    <div><b>02</b><h3>Open EasyMux</h3><p>Launch EasyMux and enter the main interface.</p></div>
+    <div><b>03</b><h3>Choose a tool</h3><p>Use the home screen to access packages, files, scripts, processes, network tools, security tools and other modules.</p></div>
+    <div><b>04</b><h3>Use the terminal</h3><p>EasyMux retains the terminal environment while adding its own guided interface and tools.</p></div>
+  </div>
+  <div class="note"><b>Backup:</b> the project stores backups under <code>Shared Storage/EasyMuxBackups</code> using the <code>easymux-backup-&lt;timestamp&gt;.tar.gz</code> naming pattern.</div>
+</section>
+
+<section id="compare" class="section">
+  <div class="section-head"><span>03 / UNDERSTANDING THE DIFFERENCE</span><h2>Termux vs EasyMux</h2><p>This comparison sticks to what the supplied project source shows.</p></div>
+  <div class="table-wrap"><table><thead><tr><th>Area</th><th>Termux</th><th>EasyMux</th></tr></thead><tbody>
+  <tr><td>Terminal environment</td><td>Core terminal environment</td><td>Retains the underlying terminal environment</td></tr>
+  <tr><td>Interface</td><td>Traditional Termux app UI</td><td>Dedicated EasyMux home/interface</td></tr>
+  <tr><td>Integrated modules</td><td>Core app + plugin ecosystem</td><td>Project adds dedicated screens for tools and management</td></tr>
+  <tr><td>Package / file workflows</td><td>Terminal-driven</td><td>Dedicated Package Manager and File Manager screens</td></tr>
+  <tr><td>Security / network</td><td>Can be used through terminal tools</td><td>Dedicated Network Tools and Security Tools screens are present</td></tr>
+  <tr><td>Backup</td><td>Manual workflows possible</td><td>Dedicated Backup screen and EasyMuxBackups location</td></tr>
+  </tbody></table></div>
+  <p class="disclaimer">EasyMux's source still contains Termux identifiers and components. The site therefore describes EasyMux as a project built on/around the Termux codebase rather than claiming it is unrelated to Termux.</p>
+</section>
+
+<section id="download" class="section download">
+  <div class="download-box">
+    <div><span class="eyebrow">04 / GET EASYMUX</span><h2>Ready to enter the terminal?</h2><p>Current project metadata identifies version <b>0.118.0</b>, version code <b>118</b>, with minimum SDK <b>21</b>, target SDK <b>28</b> and compile SDK <b>36</b>.</p></div>
+    <div class="download-actions"><a class="btn primary" id="downloadBtn" href="#" download>DOWNLOAD APK</a><small>Set the button URL to your published APK/release file before deployment.</small></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand"><span class="logo-mark">EM</span><div><b>EasyMux</b><small>Android terminal & toolkit</small></div></div>
+  <div class="creator">CREATED BY <strong>ST ZERO TRUST</strong></div>
+  <div class="quote">TRUST NOTHING. VERIFY EVERYTHING.</div>
+</footer>
+<script src="./script.js"></script>
+</body></html>
